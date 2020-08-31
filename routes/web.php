@@ -22,6 +22,7 @@ Route::get('/', function () {
  */
 Route::group([ 'prefix' => 'admin'], function(){
 
+	Route::get('/', 'Admin\TemplateController@dashboard')->name('template.dashboard');
 	Route::get('/template', 'Admin\TemplateController@dashboard')->name('template.dashboard');
 	Route::get('/template/form', 'Admin\TemplateController@form')->name('template.form');
 	Route::get('/template/table', 'Admin\TemplateController@table')->name('template.table');

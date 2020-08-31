@@ -59,16 +59,11 @@ $(document).ready(function () {
       }
     )
 
-    /*$('.date-picker').datepicker({
-      format: 'yyyy-mm-dd',
-      autoclose: true
-    })*/
-
-    $('.my-colorpicker1').colorpicker()
+    $('.my-colorpicker').colorpicker()
 
     $('.my-colorpicker2').colorpicker()
 
-    /*$('.timepicker').timepicker({
-      showInputs: false
-    })*/
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
 })

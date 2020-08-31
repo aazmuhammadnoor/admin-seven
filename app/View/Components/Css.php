@@ -127,16 +127,19 @@ class Css extends Component
     {
         foreach($this->this_css as $key => $value){
             if(strpos($value, 'http') !== false){
-                $this->renders .= '<link rel="stylesheet" href="'.$value.'">';
+                $this->renders .= '<link rel="stylesheet" href="'.$value.'">
+                ';
             }else{
-                $this->renders .= '<link rel="stylesheet" href="'.asset('admin/'.$value).'">';
+                $this->renders .= '<link rel="stylesheet" href="'.asset('admin/'.$value).'">
+                ';
             }
         }
         $extended_css = explode(';', $this->css);
         foreach ($extended_css as $key => $value) {
             if($value != '')
             {
-                $this->renders .= '<link rel="stylesheet" href="'.$value.'">';
+                $this->renders .= '<link rel="stylesheet" href="'.$value.'">
+                ';
             }
         }
         return view('components.css');

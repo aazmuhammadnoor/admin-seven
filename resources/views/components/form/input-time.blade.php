@@ -10,7 +10,7 @@
             />
             <div class="input-group-append">
                 <button class="btn btn-outline-{{ $color }}" type="button" data-target="#date_{{ $name }}" data-toggle="datetimepicker">
-                    <i class="fa fa-calendar"></i>
+                    <i class="fa fa-clock"></i>
                 </button>
             </div>
         </div>
@@ -23,7 +23,8 @@
 @push('js')
     <script type="text/javascript">
         $('#date_{{$name}}').datetimepicker({
-            format: 'YYYY-MM-DD'
+            format: 'hh:mm',
+            minuteStep : 1
         });
     </script>
 @endpush

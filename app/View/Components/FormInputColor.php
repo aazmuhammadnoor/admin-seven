@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class FormInputDate extends Component
+class FormInputColor extends Component
 {
     public $column;
     public $label;
@@ -34,6 +34,6 @@ class FormInputDate extends Component
      */
     public function render()
     {
-        return view('components.form.input-date');
+        return view('components.form.input-color');
     }
 }

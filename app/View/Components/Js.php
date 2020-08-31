@@ -167,16 +167,19 @@ class Js extends Component
     {
         foreach($this->this_js as $key => $value){
             if(strpos($value, 'http') !== false){
-                $this->renders .= '<script src="'.$value.'"></script>';
+                $this->renders .= '<script src="'.$value.'"></script>
+                ';
             }else{
-                $this->renders .= '<script src="'.asset('admin/'.$value).'"></script>';
+                $this->renders .= '<script src="'.asset('admin/'.$value).'"></script>
+                ';
             }
         }
         $extended_css = explode(';', $this->js);
         foreach ($extended_css as $key => $value) {
             if($value != '')
             {
-                $this->renders .= '<script src="'.$value.'"></script>';
+                $this->renders .= '<script src="'.$value.'"></script>
+                ';
             }
         }
         return view('components.js');

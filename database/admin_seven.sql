@@ -11,7 +11,7 @@
  Target Server Version : 100413
  File Encoding         : 65001
 
- Date: 25/08/2020 08:08:05
+ Date: 01/09/2020 02:29:41
 */
 
 SET NAMES utf8mb4;
@@ -363,7 +363,7 @@ CREATE TABLE `theme`  (
 -- ----------------------------
 -- Records of theme
 -- ----------------------------
-INSERT INTO `theme` VALUES (1, 'bg-teal', 'light bg-danger', 'bg-teal', 'bg-teal', 'bg-navy', '0000-00-00 00:00:00', '2020-08-23 16:39:37', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0);
+INSERT INTO `theme` VALUES (1, 'bg-teal', 'light bg-danger', 'bg-teal', 'bg-info', 'bg-navy', '0000-00-00 00:00:00', '2020-08-31 17:54:10', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0);
 
 -- ----------------------------
 -- Table structure for users

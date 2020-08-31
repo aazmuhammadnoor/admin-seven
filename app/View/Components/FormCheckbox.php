@@ -4,27 +4,31 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class FormInputDate extends Component
+class FormCheckbox extends Component
 {
     public $column;
     public $label;
     public $class;
     public $help;
-    public $name;
+    public $options=[];
     public $color;
+    public $value;
+    public $name;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($column,$label,$class=null,$help=null,$color="primary")
+    public function __construct($column,$label,$class=null,$help=null,$options=null,$color="primary",$value=null)
     {
         $this->column = explode(':', $column);
         $this->label = $label;
+        $this->value = $value;
         $this->class = $class;
         $this->help = $help;
-        $this->name = \Str::slug($label);
         $this->color = $color;
+        $this->options = $options;
+        $this->name = \Str::slug($label);
     }
 
     /**
@@ -34,6 +38,6 @@ class FormInputDate extends Component
      */
     public function render()
     {
-        return view('components.form.input-date');
+        return view('components.form.checkbox');
     }
 }

@@ -26,24 +26,32 @@ class FormInputEmail extends Component
     public function __construct($column,$label,$name,$value=null,$attributes=null,$events=null,$placeholder=null,$class=null,$help=null)
     {
         $this->column = explode(':', $column);
-        $this_events = [];
-        if($events != null){
-            $events = explode("&&&", $events);
-            foreach ($events as $key => $val) {
-                $val = explode(":", $val);
-                array_push($this_events, $val);
+        if(!is_array($events)){
+            $this_events = [];
+            if($events != null){
+                $events = explode("&&&", $events);
+                foreach ($events as $key => $val) {
+                    $val = explode(":", $val);
+                    array_push($this_events, $val);
+                }
             }
+            $this->this_events = $this_events;
+        }else{
+            $this->this_events = $events;
         }
-        $this_attributes = [];
-        if($attributes != null){
-            $attributes = explode("&&&", $attributes);
-            foreach ($attributes as $key => $val) {
-                $val = explode(":", $val);
-                array_push($this_attributes, $val);
+        if(!is_array($attributes)){
+            $this_attributes = [];
+            if($attributes != null){
+                $attributes = explode("&&&", $attributes);
+                foreach ($attributes as $key => $val) {
+                    $val = explode(":", $val);
+                    array_push($this_attributes, $val);
+                }
             }
+            $this->this_attributes = $this_attributes;
+        }else{
+            $this->attributes = $attributes;
         }
-        $this->this_events = $this_events;
-        $this->this_attributes = $this_attributes;
         $this->label = $label;
         $this->value = $value;
         $this->placeholder = $placeholder;

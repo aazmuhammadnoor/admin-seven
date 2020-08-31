@@ -17,7 +17,7 @@ class TemplateController extends Controller
 
     /**
      * use plugins here
-     * use space delimiter if wanna use more than one plugin
+     * use space delimiter if want to use more than one plugin
      * see documentation adminLTE official
      * - dashboard1     --> Dashboard 1
        - dashboard2     --> Dashboard 2

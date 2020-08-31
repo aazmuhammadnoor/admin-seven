@@ -4,26 +4,32 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class FormInputDate extends Component
+class FormInputNumber extends Component
 {
     public $column;
     public $label;
-    public $class;
-    public $help;
     public $name;
+    public $value;
+    public $class;
+    public $placeholder;
+    public $help;
+    public $after;
+    public $before;
     public $color;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($column,$label,$class=null,$help=null,$color="primary")
+    public function __construct($column,$label,$class=null,$help=null,$after=null,$before=null,$color="grey-light")
     {
         $this->column = explode(':', $column);
         $this->label = $label;
         $this->class = $class;
         $this->help = $help;
-        $this->name = \Str::slug($label);
+        $this->after = $after;
+        $this->before = $before;
         $this->color = $color;
     }
 
@@ -34,6 +40,6 @@ class FormInputDate extends Component
      */
     public function render()
     {
-        return view('components.form.input-date');
+        return view('components.form.input-number');
     }
 }
