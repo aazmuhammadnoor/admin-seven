@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
   
-    $('.date-picker').datetimepicker({
-        format: 'L'
-    });
+  $('.date-picker').datetimepicker({
+      format: 'L'
+  });
 
 	//$('.sidebar-menu').tree()
 

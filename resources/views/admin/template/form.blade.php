@@ -144,15 +144,56 @@
       	placeholder="Pilih"
       	name="radio"
       />
-      <x-form-switch
+      <x-form-upload
       	:column="'2:6'" 
-      	:label="'Switch'" 
+      	:label="'Upload File'" 
       	:class="''"
-      	:color="'danger|success'"
-      	:default="false" {{-- default value is boolean --}}
+      	:path="''"
       	placeholder="Pilih"
-      	name="radio"
+      	name="file"
       />
+    </x-card>
+    <x-card :title="'Stepper'">
+      @php
+        $steps = ['Logins','Various Information'];
+      @endphp
+      <x-stepper :steps="$steps" :buttons="true">
+        <div id="logins" class="content" role="tabpanel" aria-labelledby="logins-trigger">
+          <x-form-input-text 
+            :column="'2:6'"
+            :label="'Text Input'"
+            :help="'information'"
+            :class="''"
+            require="require"
+            name="text"
+            placeholder="placeholder here"
+          />
+          <x-form-input-email 
+            :column="'2:6'"
+            :label="'Email'"
+            :help="'information'"
+            :class="''"
+            require="require"
+            name="email"
+            placeholder="Email"
+            value="test@gmail.com"
+          />
+        </div>
+        <div id="various-information" class="content" role="tabpanel" aria-labelledby="various-information-trigger">
+          <x-form-upload
+            :column="'2:6'" 
+            :label="'Upload File'" 
+            :class="''"
+            :path="''"
+            placeholder="Pilih"
+            name="file"
+          />
+        </div>
+      </x-stepper>
+    </x-card>
+    <x-card :title="'Dropzone'">
+      <x-dropzone :path="'/'" :label="'Upload File'">
+      </x-dropzone>
     </x-card>
   </section>
 </div>
