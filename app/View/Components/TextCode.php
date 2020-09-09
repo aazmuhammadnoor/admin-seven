@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class TextEditor extends Component
+class TextCode extends Component
 {
     public $column;
     public $label;
@@ -13,6 +13,7 @@ class TextEditor extends Component
     public $class;
     public $placeholder;
     public $help;
+    public $id;
 
     /**
      * Create a new component instance.
@@ -25,6 +26,7 @@ class TextEditor extends Component
         $this->label = $label;
         $this->class = $class;
         $this->help = $help;
+        $this->id = \Str::slug($label);
     }
 
     /**
@@ -34,6 +36,6 @@ class TextEditor extends Component
      */
     public function render()
     {
-        return view('components.form.text-editor');
+        return view('components.form.text-code');
     }
 }

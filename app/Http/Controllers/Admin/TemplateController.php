@@ -67,7 +67,7 @@ class TemplateController extends Controller
     }
 
     /**
-     * @method update
+     * @method form
      * @return void
      */
     public function form()
@@ -78,7 +78,27 @@ class TemplateController extends Controller
             'Form' => '#'
         ];
         $page = 'admin.template.form';
-        $plugins = 'formAdvance';
+        $plugins = 'formAdvance formEditor';
+
+        $response = [
+            'title','breadcrumb','page','plugins'
+        ];
+        return view('admin.index',compact($response));
+    }
+
+    /**
+     * @method table
+     * @return void
+     */
+    public function table()
+    {
+        $title = $this->title.' Table';
+        $breadcrumb = [
+            'Theming' => route('template.dashboard'),
+            'Form' => '#'
+        ];
+        $page = 'admin.template.table';
+        $plugins = 'tableSimple tableDatatable tableJsgrid';
 
         $response = [
             'title','breadcrumb','page','plugins'

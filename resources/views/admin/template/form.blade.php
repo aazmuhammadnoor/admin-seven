@@ -204,5 +204,22 @@
       <x-dropzone :path="'/'" :label="'Upload File'">
       </x-dropzone>
     </x-card>
+    <x-card :title="'Summer Note'">
+      <x-text-editor
+        :column="'2:10'"
+        :label="'Text Editor'"
+        placeholder="'Text Editor'"
+        name="texteditor"
+      />
+    </x-card>
+    <x-card :title="'Code Miror'">
+      <x-text-code
+        :column="'2:10'"
+        :label="'Text Code'"
+        placeholder="'Text Code'"
+        name="textcode"
+        value="<h1> Sample Content </h1>"
+      />
+    </x-card>
   </section>
 </div>
