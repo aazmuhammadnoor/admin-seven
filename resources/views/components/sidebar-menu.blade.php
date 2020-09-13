@@ -1,0 +1,1 @@
+<x-tree-menu :child="$menu" />

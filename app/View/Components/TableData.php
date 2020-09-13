@@ -4,9 +4,8 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class TableSimple extends Component
+class TableData extends Component
 {
-    public $pagination;
     public $class;
     public $id;
     public $position;
@@ -17,11 +16,10 @@ class TableSimple extends Component
      *
      * @return void
      */
-    public function __construct($pagination=null,$class=null,$position=null,$height=null)
+    public function __construct($class=null,$position=null,$height=null)
     {
         $id = rand(100,999).date('ymdhis');
 
-        $this->pagination = $pagination;
         $this->class = $class;
         $this->id = $id;
         $this->height = $height;
@@ -48,6 +46,6 @@ class TableSimple extends Component
      */
     public function render()
     {
-        return view('components.table.simple');
+        return view('components.table.data');
     }
 }

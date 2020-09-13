@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Admin\AdminSevenTrait;
 
+use App\Models\FakeTable;
+
 class TemplateController extends Controller
 {
     use AdminSevenTrait;

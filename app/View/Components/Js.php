@@ -20,6 +20,7 @@ class Js extends Component
 
     protected $adminlte = [
         'dist/js/adminlte.js',
+        'dist/js/init.js'
         //'dist/js/demo.js'
     ];
 
@@ -73,7 +74,7 @@ class Js extends Component
     protected $formGeneral = [
         'plugins/bs-custom-file-input/bs-custom-file-input.min.js',
         'plugins/jquery-validation/jquery.validate.min.js',
-        'plugins/jquery-validation/additional-methods.min.js'
+        'plugins/jquery-validation/additional-methods.min.js',
     ];
 
     protected $formAdvance = [
@@ -89,8 +90,7 @@ class Js extends Component
         'plugins/bs-stepper/js/bs-stepper.min.js',
         'plugins/dropzone/min/dropzone.min.js',
         'plugins/jquery-validation/jquery.validate.min.js',
-        'plugins/jquery-validation/additional-methods.min.js',
-        'dist/js/init.js'
+        'plugins/jquery-validation/additional-methods.min.js'
     ];
 
     protected $formEditor = [
