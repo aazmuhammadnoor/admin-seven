@@ -22,39 +22,49 @@ class SidebarMenu extends Component
     {
         $menu = [
                     [
+                        "url" => route('template.dashboard'),
+                        "label" => 'Dashboard',
+                        "icon" => 'fas fa-tachometer-alt'
+                    ],
+                    [
                         "url" => '#',
-                        "label" => 'Dashboard 1',
-                        "icon" => 'fa-tachometer-alt',
+                        "label" => 'Template',
+                        "icon" => 'fas fa-clipboard',
                         "child" => [
                             [
-                                "url" => '#',
+                                "url" => route('template.form'),
                                 "label" => 'Form',
-                                "icon" => 'fa-dashboard'
+                                "icon" => 'far fa-circle'
                             ],
                             [
-                                "url" => '#',
+                                "url" => route('template.table'),
                                 "label" => 'Table',
-                                "icon" => 'fa-dashboard'
+                                "icon" => 'far fa-circle'
                             ]
                         ]
                     ],
                     [
                         "url" => '#',
-                        "label" => 'Template',
-                        "icon" => 'fa-clipboard',
+                        "label" => 'Configurations',
+                        "icon" => 'fas fa-cog',
                         "child" => [
                             [
-                                "url" => '#',
-                                "label" => 'Form',
-                                "icon" => 'fa-dashboard'
+                                "url" => route('backend.theming'),
+                                "label" => 'Theme',
+                                "icon" => 'fas fa-paint-brush'
                             ],
                             [
-                                "url" => '#',
-                                "label" => 'Table',
-                                "icon" => 'fa-dashboard'
+                                "url" => route('backend.user'),
+                                "label" => 'User',
+                                "icon" => 'fas fa-user'
+                            ],
+                            [
+                                "url" => route('backend.group'),
+                                "label" => 'Group',
+                                "icon" => 'fas fa-users'
                             ]
                         ]
-                    ]
+                    ] 
                 ];
 
         $this->menu = $menu;

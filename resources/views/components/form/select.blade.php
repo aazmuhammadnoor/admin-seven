@@ -30,6 +30,14 @@
 </div>
 @push('js')
     <script type="text/javascript">
-        $('.select2').select2()
+        $(document).ready(function() {
+            $('.select2').select2()
+            $('.select2').on('change', function (e) {
+                let elementName = $(this).attr('name');
+                var data = $(this).select2("val");
+                @this.set(elementName, data);
+                setTimeout(function(){ $('.select2').select2() }, 1000);
+            });
+        });
     </script>
 @endpush

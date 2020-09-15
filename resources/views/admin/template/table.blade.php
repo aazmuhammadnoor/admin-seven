@@ -497,3 +497,10 @@
     </x-card>
   </section>
 </div>
+
+@push('js')
+  <script type="text/javascript">
+    openMenu('Template');
+    activeMenu('Table');
+  </script>
+@endpush

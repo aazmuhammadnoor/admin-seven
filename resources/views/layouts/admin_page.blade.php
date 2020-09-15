@@ -34,7 +34,7 @@
             @if(isset($breadcrumb))
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ url('/backend') }}">Dashboard</a></li>
                 @foreach($breadcrumb as $name => $link)
                   <li class="breadcrumb-item">
                     <a href="{{ $link }}">{{ $name }}</a>

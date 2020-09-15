@@ -11,13 +11,14 @@ class TableSimple extends Component
     public $id;
     public $position;
     public $height = 300;
+    public $emitTo;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($pagination=null,$class=null,$position=null,$height=null)
+    public function __construct($pagination=null,$class=null,$position=null,$height=null,$emitTo=null)
     {
         $id = rand(100,999).date('ymdhis');
 
@@ -25,6 +26,7 @@ class TableSimple extends Component
         $this->class = $class;
         $this->id = $id;
         $this->height = $height;
+        $this->emitTo = explode('|', $emitTo);
         switch ($position) {
             case 'center':
                 $this->position = 'center';

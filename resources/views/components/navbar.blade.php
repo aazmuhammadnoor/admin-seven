@@ -170,7 +170,7 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column {{ AdminSeven::theme('is_sidebar_small')}} {{ AdminSeven::theme('is_sidebar_flat')}} {{ AdminSeven::theme('is_sidebar_legacy')}} {{ AdminSeven::theme('is_sidebar_compact')}} {{ AdminSeven::theme('is_sidebar_child_indent')}} {{ AdminSeven::theme('is_sidebar_child_hide')}} {{ AdminSeven::theme('is_sidebar_disable_expand')}}" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column {{ AdminSeven::theme('is_sidebar_small')}} {{ AdminSeven::theme('is_sidebar_flat')}} {{ AdminSeven::theme('is_sidebar_legacy')}} {{ AdminSeven::theme('is_sidebar_compact')}} {{ AdminSeven::theme('is_sidebar_child_indent')}} {{ AdminSeven::theme('is_sidebar_child_hide')}} {{ AdminSeven::theme('is_sidebar_disable_expand')}}" data-widget="treeview" role="menu" data-accordion="false" id="sidebar">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <x-sidebar-menu />

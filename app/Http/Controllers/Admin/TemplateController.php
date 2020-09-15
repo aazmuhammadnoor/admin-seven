@@ -65,7 +65,7 @@ class TemplateController extends Controller
         $response = [
             'title','breadcrumb','page','plugins','css','js'
         ];
-        return view('admin.index',compact($response));
+        return view('admin-seven',compact($response));
     }
 
     /**
@@ -85,7 +85,7 @@ class TemplateController extends Controller
         $response = [
             'title','breadcrumb','page','plugins'
         ];
-        return view('admin.index',compact($response));
+        return view('admin-seven',compact($response));
     }
 
     /**
@@ -105,6 +105,6 @@ class TemplateController extends Controller
         $response = [
             'title','breadcrumb','page','plugins'
         ];
-        return view('admin.index',compact($response));
+        return view('admin-seven',compact($response));
     }
 }

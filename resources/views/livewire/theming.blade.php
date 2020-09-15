@@ -308,3 +308,9 @@
 		})
 	</script>
 @endpush
+@push('js')
+  <script type="text/javascript">
+    openMenu('Configurations');
+    activeMenu('Theme');
+  </script>
+@endpush

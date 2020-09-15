@@ -167,3 +167,28 @@ $(document).on('click','.nav-btn',function(e)
     let page = $(this).data('page');
     window.location.href=path+'?page='+page;
 })
+
+function str_slug(Text)
+{
+    return Text
+        .toLowerCase()
+        .replace(/ /g,'-')
+        .replace(/[^\w-]+/g,'')
+        ;
+}
+
+function activeMenu(element)
+{
+  element = str_slug(element);
+  setTimeout(function(){ 
+    $(".menu-"+element).addClass('active');
+  }, 1000);
+}
+
+function openMenu(element)
+{
+  element = str_slug(element);
+  setTimeout(function(){ 
+    $(".menu-"+element).addClass('active menu-open');
+  }, 1000);
+}

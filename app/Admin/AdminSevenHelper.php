@@ -234,4 +234,36 @@ class AdminSevenHelper{
 		$respose = array_unique($respose);
 		return $respose;
 	}
+
+	/**
+	 * creating menu
+	 * @method createMenu
+	 * @param array $menu
+	 * @return string
+	 */
+	public static function createMenu($menu){
+		foreach($menu as $ch){
+			if(isset($ch['child']))
+			{
+				echo '<li class="nav-item has-treeview">
+						<a href="#" class="nav-link">
+							<i class="fas '.$ch['icon'].' nav-icon"></i>
+							<p>'.$ch['label'].'</p>
+							<i class="right fas fa-angle-left"></i>
+						</a>
+	    			  </li>
+	    			  <ul class="nav nav-treeview">';
+	    			  	Self::createMenu($ch['child']);
+				echo '</ul>
+				    </li>';
+			}else{
+				echo '<li class="nav-item">
+						<a href="'.$ch['url'].'" class="nav-link">
+							<i class="fas '.$ch['icon'].' nav-icon"></i>
+							<p>'.$ch['label'].'</p>
+						</a>
+	    			  </li>';
+			}
+		}
+	}
 }

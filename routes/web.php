@@ -20,14 +20,20 @@ Route::get('/', function () {
 /**
  * Backend route here
  */
-Route::group([ 'prefix' => 'admin'], function(){
+Route::group([ 'prefix' => "backend"], function(){
+
+	Route::get('/login', 'Auth\Admin\LoginController@showLoginForm')->name('backend.login');
 
 	Route::get('/', 'Admin\TemplateController@dashboard')->name('template.dashboard');
-	Route::get('/template', 'Admin\TemplateController@dashboard')->name('template.dashboard');
+
+	/*templates*/
 	Route::get('/template/form', 'Admin\TemplateController@form')->name('template.form');
 	Route::get('/template/table', 'Admin\TemplateController@table')->name('template.table');
 	Route::get('/template/blank', 'Admin\TemplateController@blank')->name('template.blank');
-	Route::get('/theming', 'Admin\ThemingController@index')->name('theming');
 
-	Route::get('/login', 'Auth\Admin\LoginController@showLoginForm')->name('backend.login');
+	/*configurations*/
+	Route::get('/theming', 'Admin\ThemingController@index')->name('backend.theming');
+	Route::get('/group', 'Admin\ConfigurationController@group')->name('backend.group');
+	Route::get('/user', 'Admin\ConfigurationController@user')->name('backend.user');
+
 });

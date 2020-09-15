@@ -61,6 +61,6 @@ class ThemingController extends Controller
     	$response = [
     		'title','breadcrumb','livewire','plugins','css','js'
     	];
-    	return view('admin.index',compact($response));
+    	return view('admin-seven',compact($response));
     }
 }
